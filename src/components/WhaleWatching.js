@@ -44,7 +44,7 @@ const WhaleWatching = () => {
                 <div key={i}>
                     <code style={{fontSize:'8px'}}>
                         Address: {whale.TokenHolderAddress}&nbsp;
-                        {printBal(whale.TokenHolderQuantity)}
+                        {printBal(Math.floor(parseInt(whale.TokenHolderQuantity)/1000000000).toString())}
 
                     </code>
                 </div>

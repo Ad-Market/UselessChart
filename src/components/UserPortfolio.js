@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BsGraphUp } from 'react-icons/bs'
+import { BsGraphUp, BsGraphDown } from 'react-icons/bs'
 import axios from 'axios'
 
 const UserPortfolio = () => {
@@ -96,7 +96,7 @@ const UserPortfolio = () => {
     var data = sortData();
 
     return(
-        <div>
+        <div style={{marginTop:'10vh'}}>
             <h4>User Portfolio</h4>
             <input type='text' value={userPublicKey} style={{width:'40vw', textAlign:'center'}}
              onChange={(e) => setUserPublicKey(e.target.value)} placeholder='Enter BEP20 Receiving Address'/> <br />
@@ -134,7 +134,7 @@ const UserPortfolio = () => {
                     </div>
                     </div>
                     <div style={{alignSelf:'flex-end', marginRight:'1vw'}}>
-                        {i**2 % 3 == 1 ? <BsGraphUp size='5rem' color='green'/> : <BsGraphUp size='5rem' color='red'/> }
+                        {i**2 % 3 == 1 ? <BsGraphUp size='5rem' color='green'/> : <BsGraphDown size='5rem' color='red'/> }
                     </div>
                     </div>
                 )
